@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ContextList">
+
+    <fragment
+        android:id="@+id/ContextList"
+        android:name="andrew.organiser.myhead.ContextList"
+        android:label="@string/context_list_label"
+        tools:layout="@layout/context_list">
+        <action
+            android:id="@+id/action_ContextList_to_ContextAddEdit"
+            app:destination="@id/ContextAddEdit" />
+        <action
+            android:id="@+id/action_ContextList_to_TaskList"
+            app:destination="@id/TaskList" />
+    </fragment>
+    <fragment
+        android:id="@+id/ContextAddEdit"
+        android:name="andrew.organiser.myhead.ContextAddEdit"
+        android:label="@string/context_add_edit_label"
+        tools:layout="@layout/context_add_edit">
+
+    </fragment>
+    <fragment
+        android:id="@+id/TaskList"
+        android:name="andrew.organiser.myhead.TaskList"
+        android:label=""
+        tools:layout="@layout/task_list">
+        <action
+            android:id="@+id/action_TaskList_to_TaskAddEdit"
+            app:destination="@id/TaskAddEdit" />
+        <action
+            android:id="@+id/action_TaskList_to_TaskArchive"
+            app:destination="@id/TaskArchive" />
+    </fragment>
+    <fragment
+        android:id="@+id/TaskAddEdit"
+        android:name="andrew.organiser.myhead.TaskAddEdit"
+        android:label="@string/task_add_edit_label"
+        tools:layout="@layout/task_add_edit">
+    </fragment>
+    <fragment
+        android:id="@+id/TaskArchive"
+        android:name="andrew.organiser.myhead.TaskArchive"
+        android:label="@string/task_add_edit_label"
+        tools:layout="@layout/task_add_edit">
+    </fragment>
+</navigation>

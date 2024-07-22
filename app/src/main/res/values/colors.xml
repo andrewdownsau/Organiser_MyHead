@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#FFCCCCCC</color>
+    <color name="dark_grey">#FF444444</color>
+    <color name="background">#FF50BEFF</color>
+    <color name="background_disabled">#FF7fcfff</color>
+    <color name="background2">#FFc0fca7</color>
+    <color name="content">#FF0c033e</color>
+    <color name="sub_content">#FF8694b1</color>
+    <color name="neg_progress">#FFde3d3d</color>
+    <color name="pos_progress">#FF5ed652</color>
+
+</resources>

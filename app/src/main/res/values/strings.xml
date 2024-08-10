@@ -1,20 +1,22 @@
 <resources>
-    <string name="app_name">My Head</string>
+    <string name="app_name">My Head v2</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="context_list_label">Context List</string>
     <string name="context_add_edit_label">Context Add/Edit</string>
     <string name="context_name">Context Name:</string>
     <string name="context_type">Context Type:</string>
+    <string name="context_label">Context:</string>
+
     <string name="task_list_label">Task List</string>
     <string name="archive_list_label">Archive List</string>
     <string name="task_add_edit_label">Task Add/Edit</string>
+    <string name="urgent_list_label">Urgent Task List</string>
+    <string name="settings_label">Settings</string>
     <string name="task_name">Task:</string>
     <string name="motive_name">Motive:</string>
     <string name="complexity_name">Complexity:</string>
-    <string name="positive_motivation_name">+ Motivation:</string>
-    <string name="negative_motivation_name">- Motivation:</string>
-    <string name="overall_name">Overall Score:</string>
+    <string name="motivation_name">Motivation:</string>
     <string name="start_date_name">Start Date:</string>
     <string name="end_date_name">End Date:</string>
     <string name="frequency_name">Frequency:</string>
@@ -22,6 +24,17 @@
     <string name="notes_name">Notes:</string>
     <string name="repeat_name">Repeat Task:</string>
     <string name="date_hint">Enter Date</string>
+    <string name="export_label">Export Data for Backup:</string>
+
+    <string name="warning">Warning</string>
+    <string name="context_warning">No contexts listed.\nPlease add context.</string>
+    <string name="task_warning">No tasks listed.\nPlease add task.</string>
+    <string name="archive_warning">No tasks archived.\nNeed to complete tasks.</string>
+    <string name="urgent_warning">No urgent tasks listed.\nAll caught up.</string>
+    <string name="clone_warning">Cannot match names with other items.</string>
+    <string name="max_character_warning">Name cannot exceed 60 characters in length</string>
+    <string name="date_warning">Start date must not be before due date</string>
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="close">Close</string>

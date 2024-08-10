@@ -36,6 +36,20 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_urgent_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="80dp"
+        app:srcCompat="@android:drawable/ic_menu_recent_history"
+        app:backgroundTint="#fd4a4a"
+        app:maxImageSize="30dp"
+        app:tint="#000000"
+        app:shapeAppearanceOverlay="@style/fab_rounded"
+        android:contentDescription="@string/fab_add_context" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,5 +61,7 @@
         app:tint="@color/content"
         app:shapeAppearanceOverlay="@style/fab_rounded"
         android:contentDescription="@string/fab_add_context" />
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

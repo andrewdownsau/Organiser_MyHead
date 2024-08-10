@@ -9,7 +9,7 @@
                 android:endColor="@android:color/transparent"
                 android:centerX="0.3"
                 android:centerY="0.0"
-                android:gradientRadius="200%p"/>
+                android:gradientRadius="400%p"/>
             <corners android:radius="15dp" />
         </shape>
     </item>

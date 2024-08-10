@@ -7,10 +7,34 @@
     tools:context=".TaskAddEdit">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_add_edit_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:minHeight="200dp"
         android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/label_context"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/context_label"
+            android:textSize="16sp"
+            android:textColor="@color/sub_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Spinner
+            android:id="@+id/context_spinner"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:autofillHints="Name of motive"
+            android:inputType="textCapSentences"
+            android:textColor="@color/sub_content"
+            android:labelFor="@id/label_condition"
+            app:layout_constraintTop_toTopOf="@id/label_context"
+            app:layout_constraintLeft_toRightOf="@id/label_context" />
 
         <TextView
             android:id="@+id/label_task_name"
@@ -20,7 +44,7 @@
             android:text="@string/task_name"
             android:textSize="16sp"
             android:textColor="@color/sub_content"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_context"
             app:layout_constraintLeft_toLeftOf="parent" />
 
         <EditText
@@ -29,7 +53,6 @@
             android:layout_height="wrap_content"
             android:autofillHints="Name of task"
             android:inputType="textCapSentences"
-            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             android:textColor="@color/sub_content"
             android:labelFor="@id/label_task_name"
             app:layout_constraintTop_toBottomOf="@id/label_task_name"
@@ -54,7 +77,6 @@
             android:layout_height="wrap_content"
             android:autofillHints="Name of motive"
             android:inputType="textCapSentences"
-            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             android:textColor="@color/sub_content"
             android:labelFor="@id/label_motive_name"
             app:layout_constraintTop_toBottomOf="@id/label_motive_name"
@@ -94,116 +116,38 @@
             app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
-            android:id="@+id/label_positive_motivation"
+            android:id="@+id/label_motivation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/positive_motivation_name"
+            android:text="@string/motivation_name"
             android:textSize="16sp"
             android:textColor="@color/sub_content"
             app:layout_constraintTop_toBottomOf="@+id/seekbar_complexity"
             app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
-            android:id="@+id/positive_motivation_value"
+            android:id="@+id/motivation_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="16sp"
             android:textColor="@color/sub_content"
             app:layout_constraintTop_toBottomOf="@+id/seekbar_complexity"
-            app:layout_constraintLeft_toRightOf="@+id/label_positive_motivation" />
+            app:layout_constraintLeft_toRightOf="@+id/label_motivation" />
 
         <SeekBar
-            android:id="@+id/seekbar_positive_motivation"
+            android:id="@+id/seekbar_motivation"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="9"
             android:progress="5"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/label_positive_motivation"
+            app:layout_constraintTop_toBottomOf="@+id/label_motivation"
             app:layout_constraintLeft_toLeftOf="parent" />
 
-        <TextView
-            android:id="@+id/label_negative_motivation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/negative_motivation_name"
-            android:textSize="16sp"
-            android:textColor="@color/sub_content"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar_positive_motivation"
-            app:layout_constraintLeft_toLeftOf="parent" />
 
-        <TextView
-            android:id="@+id/negative_motivation_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:textColor="@color/sub_content"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar_positive_motivation"
-            app:layout_constraintLeft_toRightOf="@+id/label_negative_motivation" />
-
-        <SeekBar
-            android:id="@+id/seekbar_negative_motivation"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="9"
-            android:progress="1"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/label_negative_motivation"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-        <TextView
-            android:id="@+id/label_overall_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/overall_name"
-            android:textSize="16sp"
-            android:textColor="@color/sub_content"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar_negative_motivation"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-        <TextView
-            android:id="@+id/overall_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:textColor="@color/sub_content"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar_negative_motivation"
-            app:layout_constraintLeft_toRightOf="@+id/label_overall_score" />
-
-
-        <ProgressBar
-            android:id="@+id/overall_progress_bar_pos"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:max="8"
-            android:progressTint="@color/pos_progress"
-            app:layout_constraintWidth_percent="0.615"
-            app:layout_constraintTop_toBottomOf="@+id/overall_value"
-            app:layout_constraintRight_toRightOf="parent"/>
-
-        <ProgressBar
-            android:id="@+id/overall_progress_bar_neg"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:rotation="180"
-            android:min="0"
-            android:max="5"
-            android:progressTint="@color/neg_progress"
-            app:layout_constraintWidth_percent="0.385"
-            app:layout_constraintTop_toBottomOf="@+id/overall_value"
-            app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
             android:id="@+id/label_start_date"
@@ -214,7 +158,7 @@
             android:textSize="16sp"
             android:textColor="@color/sub_content"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintTop_toBottomOf="@+id/overall_progress_bar_neg"
+            app:layout_constraintTop_toBottomOf="@+id/seekbar_motivation"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/label_end_date" />
 
@@ -242,7 +186,7 @@
             android:text="@string/end_date_name"
             android:textSize="16sp"
             android:textColor="@color/sub_content"
-            app:layout_constraintTop_toBottomOf="@+id/overall_progress_bar_neg"
+            app:layout_constraintTop_toBottomOf="@+id/seekbar_motivation"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/label_start_date" />
 
@@ -290,6 +234,7 @@
             android:text="@string/frequency_name"
             android:textSize="16sp"
             android:textColor="@color/sub_content"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/label_repeat_check"
             app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -301,6 +246,7 @@
             android:inputType="textCapSentences"
             android:textColor="@color/sub_content"
             android:labelFor="@id/label_condition"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="@id/label_frequency"
             app:layout_constraintLeft_toRightOf="@id/label_frequency" />
 
@@ -344,7 +290,6 @@
             android:layout_height="wrap_content"
             android:autofillHints="Notes"
             android:inputType="textCapSentences|textMultiLine"
-            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             android:textColor="@color/sub_content"
             android:gravity="top|start"
             android:lines="3"
@@ -352,7 +297,20 @@
             app:layout_constraintLeft_toLeftOf="parent"
             tools:ignore="LabelFor" />
 
-
+        <TextView
+            android:id="@+id/label_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:lines="2"
+            android:text="@string/max_character_warning"
+            android:textSize="16sp"
+            android:textColor="#fd4a4a"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/edit_notes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <!-- CRUD Buttons at base of page -->
         <android.widget.Button
@@ -363,7 +321,7 @@
             style="@style/button_primary"
             android:layout_marginTop="20dp"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintTop_toBottomOf="@id/edit_notes"
+            app:layout_constraintTop_toBottomOf="@id/label_warning"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/btn_save" />

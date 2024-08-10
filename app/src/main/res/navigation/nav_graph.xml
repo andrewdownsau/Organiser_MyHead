@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ContextList"
-        android:name="andrew.organiser.myhead.ContextList"
+        android:name="andrew.organiser.myhead_v2.ContextList"
         android:label="@string/context_list_label"
         tools:layout="@layout/context_list">
         <action
@@ -16,17 +16,19 @@
         <action
             android:id="@+id/action_ContextList_to_TaskList"
             app:destination="@id/TaskList" />
+        <action
+            android:id="@+id/action_ContextList_to_UrgentList"
+            app:destination="@id/UrgentList" />
     </fragment>
     <fragment
         android:id="@+id/ContextAddEdit"
-        android:name="andrew.organiser.myhead.ContextAddEdit"
+        android:name="andrew.organiser.myhead_v2.ContextAddEdit"
         android:label="@string/context_add_edit_label"
         tools:layout="@layout/context_add_edit">
-
     </fragment>
     <fragment
         android:id="@+id/TaskList"
-        android:name="andrew.organiser.myhead.TaskList"
+        android:name="andrew.organiser.myhead_v2.TaskList"
         android:label=""
         tools:layout="@layout/task_list">
         <action
@@ -38,14 +40,34 @@
     </fragment>
     <fragment
         android:id="@+id/TaskAddEdit"
-        android:name="andrew.organiser.myhead.TaskAddEdit"
+        android:name="andrew.organiser.myhead_v2.TaskAddEdit"
         android:label="@string/task_add_edit_label"
         tools:layout="@layout/task_add_edit">
     </fragment>
     <fragment
         android:id="@+id/TaskArchive"
-        android:name="andrew.organiser.myhead.TaskArchive"
-        android:label="@string/task_add_edit_label"
-        tools:layout="@layout/task_add_edit">
+        android:name="andrew.organiser.myhead_v2.TaskArchive"
+        android:label="@string/archive_list_label"
+        tools:layout="@layout/task_archive">
     </fragment>
+    <fragment
+        android:id="@+id/UrgentList"
+        android:name="andrew.organiser.myhead_v2.UrgentList"
+        android:label="@string/urgent_list_label"
+        tools:layout="@layout/urgent_list">
+        <action
+            android:id="@+id/action_UrgentList_to_TaskAddEdit"
+            app:destination="@id/TaskAddEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/Settings"
+        android:name="andrew.organiser.myhead_v2.Settings"
+        android:label="@string/settings_label"
+        tools:layout="@layout/settings">
+    </fragment>
+
+    <!--Global Actions -->
+    <action
+        android:id="@+id/navigate_to_Settings"
+        app:destination="@id/Settings" />
 </navigation>

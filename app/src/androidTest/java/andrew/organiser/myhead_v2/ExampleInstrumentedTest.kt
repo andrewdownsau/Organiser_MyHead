@@ -1,4 +1,4 @@
-package andrew.organiser.myhead
+package andrew.organiser.myhead_v2
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("andrew.organiser.myhead", appContext.packageName)
+        assertEquals("andrew.organiser.myhead_v2", appContext.packageName)
     }
 }

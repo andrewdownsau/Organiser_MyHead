@@ -1,4 +1,4 @@
-package andrew.organiser.myhead
+package andrew.organiser.myhead_v2
 
 import org.junit.Test
 

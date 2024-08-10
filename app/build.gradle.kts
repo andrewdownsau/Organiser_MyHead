@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    namespace = "andrew.organiser.myhead"
+    namespace = "andrew.organiser.myhead_v2"
     compileSdk = 34
 
 
     defaultConfig {
-        applicationId = "andrew.organiser.myhead"
+        applicationId = "andrew.organiser.myhead_v2"
         minSdk = 31
         targetSdk = 34
         versionCode = 1

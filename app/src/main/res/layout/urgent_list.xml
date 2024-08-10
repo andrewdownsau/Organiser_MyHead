@@ -5,23 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskList">
+    tools:context=".UrgentList">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/task_list_layout"
+            android:id="@+id/urgent_list_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/subtitle_task_text"
+                android:id="@+id/subtitle_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/archive_warning"
+                android:text="@string/urgent_warning"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textColor="@color/sub_content"

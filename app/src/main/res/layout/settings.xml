@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskAddEdit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_add_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="200dp"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/label_export"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/export_label"
+            android:textSize="16sp"
+            android:textColor="@color/sub_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <android.widget.Button
+            android:id="@+id/button_download_export"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_menu_download"
+            style="@style/button_primary"
+            app:layout_constraintTop_toTopOf="@id/label_export"
+            app:layout_constraintLeft_toRightOf="@id/label_export" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
